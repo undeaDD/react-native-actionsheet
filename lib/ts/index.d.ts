@@ -11,8 +11,6 @@ interface Props {
   styles?: object;
 }
 
-class ActionSheet extends Component<Props> {
+export default class ActionSheet extends Component<Props> {
   public show: () => void;
 }
-
-export default ActionSheet;
