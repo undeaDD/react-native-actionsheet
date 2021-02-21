@@ -17,13 +17,13 @@ Cross platform ActionSheet. This component implements a custom ActionSheet  and 
 ## Install
 
 ```
-npm install react-native-actionsheet --save
+npm i -S @alessiocancian/react-native-actionsheet
 ```
 
 ## Usage
 
 ```js
-import ActionSheet from 'react-native-actionsheet'
+import ActionSheet from '@alessiocancian/react-native-actionsheet'
 
 class Demo extends React.Component {
   showActionSheet = () => {
@@ -53,7 +53,7 @@ class Demo extends React.Component {
 so you can customize option and title
 
 ```js
-import { ActionSheetCustom as ActionSheet } from 'react-native-actionsheet'
+import { ActionSheetCustom as ActionSheet } from '@alessiocancian/react-native-actionsheet'
 
 const options = [
   'Cancel', 
@@ -87,7 +87,7 @@ class Demo extends React.Component {
 
 ### How to redesign style ?
 
-The style of ActionSheet is defined in [lib/styles.js](https://github.com/beefe/react-native-actionsheet/blob/master/lib/styles.js). We can pass the `styles` prop to cover default style. See [Example](https://github.com/beefe/react-native-actionsheet/blob/master/example/app/ExampleB.js#L48) .
+The style of ActionSheet is defined in [lib/styles.js](https://github.com/alessiocancian/react-native-actionsheet/blob/master/lib/styles.js). We can pass the `styles` prop to cover default style. See [Example](https://github.com/alessiocancian/react-native-actionsheet/blob/master/example/app/ExampleB.js#L48) .
 
 ```javascript
 // example
@@ -110,7 +110,7 @@ const styles = {
 
 ## Props
 
-https://github.com/beefe/react-native-actionsheet/blob/master/lib/options.js
+https://github.com/alessiocancian/react-native-actionsheet/blob/master/lib/options.js
 
 <table>
     <tr>
