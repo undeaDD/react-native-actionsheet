@@ -162,6 +162,12 @@ https://github.com/alessiocancian/react-native-actionsheet/blob/master/lib/optio
         <td>(index) => {}</td>
     </tr>
     <tr>
+        <td>userInterfaceStyle</td>
+        <td>iOS only, RN version >=0.63</td>
+        <td>"light" | "dark"</td>
+        <td>System theme</td>
+    </tr>
+    <tr>
         <td>styles</td>
         <td>only for ActionSheetCustom</td>
         <td></td>
