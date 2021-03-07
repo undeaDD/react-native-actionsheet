@@ -9,6 +9,11 @@ interface Props {
   cancelButtonIndex?: number;
   destructiveButtonIndex?: number;
   styles?: object;
+	/**
+	 * iOS only, change default theme
+	 * @default system theme color
+	 */
+	userInterfaceStyle?: "light" | "dark"
 }
 
 export default class ActionSheet extends Component<Props> {
