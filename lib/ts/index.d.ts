@@ -9,6 +9,7 @@ type Props = {
 	tintColor?: string;
 	cancelButtonIndex?: number;
 	destructiveButtonIndex?: number;
+	theme?: "default" | "ios";
 	/**
 	 * Only for Android or ActionSheetCustom
 	 */
