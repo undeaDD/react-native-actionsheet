@@ -9,7 +9,6 @@ type Props = {
 	tintColor?: string;
 	cancelButtonIndex?: number;
 	destructiveButtonIndex?: number;
-	theme?: "default" | "ios";
 	/**
 	 * Only for Android or ActionSheetCustom
 	 */
@@ -32,10 +31,16 @@ type Props = {
 
 type ActionSheetProps = Props & {
 	/**
-	 * iOS only, change default theme
+	 * Change theme color
 	 * @default system theme color
 	 */
 	userInterfaceStyle?: "light" | "dark"
+	/**
+	 * Android only.
+	 * **ios** theme is similar to the iOS ActionSheet with rounded boxes
+	 * @default flat
+	 */
+	 theme?: "flat" | "ios"
 }
 
 export default class ActionSheet extends Component<ActionSheetProps> {
@@ -46,6 +51,16 @@ type ActionSheetCustomProps = Props | {
 	title?: string | React.ReactNode
 	message?: string | React.ReactNode
 	options: (string | React.ReactChild)[]
+
+	/**
+	 * Starting from v3.0.0 ActionSheetCustom uses a native-like theme build using react-native to allow React Components as options (or title or message)
+	 * 
+	 * **flat** is the default option for Android (use theme="flat" to use it on iOS too)
+	 * 
+	 * Use theme="ios" to use rounded boxes (like iOS theme) on Android
+	 * @default flat for Android and native-like for iOS
+	 */
+	theme?: "flat" | "ios"
 }
 
 export class ActionSheetCustom extends Component<ActionSheetCustomProps> {
