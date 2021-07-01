@@ -27,14 +27,15 @@ type Props = {
 		wrapper?: ViewStyle,
 		body?: ViewStyle,
 	};
-}
 
-type ActionSheetProps = Props & {
 	/**
 	 * Change theme color
 	 * @default system theme color
 	 */
-	userInterfaceStyle?: "light" | "dark"
+	 userInterfaceStyle?: "light" | "dark"
+}
+
+type ActionSheetProps = Props & {
 	/**
 	 * Android only.
 	 * **ios** theme is similar to the iOS ActionSheet with rounded boxes
