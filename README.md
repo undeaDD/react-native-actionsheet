@@ -15,6 +15,37 @@ Cross platform ActionSheet. This component implements a custom ActionSheet  and 
   </tbody>
 </table>
 
+
+Starting from v3.0.0 a custom ActionSheet with a native-like UI is available and used as default option for iOS:
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img width="210" src="https://user-images.githubusercontent.com/18497523/124150424-d98de400-da91-11eb-94fb-2282624bf75f.png">
+      </td>
+      <td align="center" valign="top">
+        <img width="210" src="https://user-images.githubusercontent.com/18497523/124150414-d72b8a00-da91-11eb-8be2-ff2d9ef2064a.png">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+A similar UI is available for Android too by passing `theme="ios"`:
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img width="210" src="https://user-images.githubusercontent.com/18497523/124151227-9bdd8b00-da92-11eb-832b-18387354911e.jpeg">
+      </td>
+      <td align="center" valign="top">
+        <img width="210" src="https://user-images.githubusercontent.com/18497523/124151223-9a13c780-da92-11eb-9d6c-b462517ebafc.jpeg">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 ## Install
 
 ```
@@ -116,62 +147,68 @@ https://github.com/alessiocancian/react-native-actionsheet/blob/master/lib/optio
 <table>
     <tr>
         <th>Prop name</th>
-        <th>Description</th>
         <th>Type</th>
+        <th>Description</th>
         <th>Default</th>
     </tr>
     <tr>
         <td>title</td>
-        <td></td>
-        <td>PropTypes.string or PropTypes.element</td>
+        <td>string or ReactNode</td>
+        <td>ActionSheetCustom needed to use ReactNode for iOS</td>
         <td></td>
     </tr>
     <tr>
         <td>message</td>
-        <td></td>
-        <td>PropTypes.string or PropTypes.element</td>
+        <td>string or ReactNode</td>
+        <td>ActionSheetCustom needed to use ReactNode for iOS</td>
         <td></td>
     </tr>
     <tr>
         <td>options</td>
-        <td></td>
-        <td>PropTypes.arrayOf([PropTypes.string, PropTypes.element])</td>
+        <td>(string | ReactChild)[]</td>
+        <td>ActionSheetCustom needed to use ReactChild options for iOS</td>
         <td></td>
     </tr>
     <tr>
         <td>tintColor</td>
+        <td>string</td>
         <td></td>
-        <td>PropTypes.string</td>
         <td></td>
     </tr>
     <tr>
         <td>cancelButtonIndex</td>
+        <td>number</td>
         <td></td>
-        <td>PropTypes.number</td>
         <td></td>
     </tr>
     <tr>
         <td>destructiveButtonIndex</td>
+        <td>number</td>
         <td></td>
-        <td>PropTypes.number</td>
         <td></td>
     </tr>
     <tr>
         <td>onPress</td>
+        <td>function</td>
         <td></td>
-        <td>PropTypes.func</td>
-        <td>(index) => {}</td>
+        <td></td>
     </tr>
     <tr>
         <td>userInterfaceStyle</td>
-        <td>iOS only, RN version >=0.63</td>
         <td>"light" | "dark"</td>
+        <td>RN version >=0.63</td>
         <td>System theme</td>
     </tr>
     <tr>
-        <td>styles</td>
-        <td>only for ActionSheetCustom</td>
+        <td>theme</td>
+        <td>"flat" | "ios"</td>
         <td></td>
+        <td>flat for Android and native or native-like for iOS</td>
+    </tr>
+    <tr>
+        <td>styles</td>
+        <td></td>
+        <td>only for ActionSheetCustom</td>
         <td>{}</td>
     </tr>
 </table>
