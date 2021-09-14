@@ -54,6 +54,13 @@ type ActionSheetCustomProps = Props | {
 	options: (string | React.ReactChild)[]
 
 	/**
+	 * Edit supported orientations (https://reactnative.dev/docs/modal#supportedorientations-ios).
+	 * Use this prop to support portrait-upsite-down or to lock landscape orientation.
+	 * @default ["portrait", "landscape", "landscape-left", "landscape-right"]
+	 */
+	supportedOrientations?: string[]
+
+	/**
 	 * Starting from v3.0.0 ActionSheetCustom uses a native-like theme build using react-native to allow React Components as options (or title or message)
 	 * 
 	 * **flat** is the default option for Android (use theme="flat" to use it on iOS too)
