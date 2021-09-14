@@ -1,4 +1,4 @@
 
-import { BlurView } from '@react-native-community/blur'
+import { BlurView } from 'expo-blur'
 
 export default BlurView

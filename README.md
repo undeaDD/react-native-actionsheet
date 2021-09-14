@@ -1,6 +1,6 @@
 # react-native-actionsheet
 [![npm](https://img.shields.io/npm/v/@alessiocancian/react-native-actionsheet)](https://www.npmjs.com/package/@alessiocancian/react-native-actionsheet)\
-Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
+Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the different platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
 
 <table>
   <tbody>
@@ -12,11 +12,20 @@ Cross platform ActionSheet. This component implements a custom ActionSheet  and 
         <img width="210" src="./docs/ios-native.png">
       </td>
     </tr>
+    <tr>
+      <td align="center">Android</td>
+      <td align="center">iOS</td>
+    </tr>
   </tbody>
 </table>
 
+This library provides two components:
+- **ActionSheet**, the standard version which uses `ActionSheetIOS` for iOS
+- **ActionSheetCustom**, which allows to use React Components instead of plain text for `title`, `message` and `options` props
 
-Starting from v3.0.0 a custom ActionSheet with a native-like UI is available and used as default option for iOS:
+<br/>
+
+Starting from v3.0.0 ActionSheetCustom with a native-like UI is available and used as default option for iOS:
 <table>
   <tbody>
     <tr>
@@ -51,6 +60,13 @@ A similar UI is available for Android too by passing `theme="ios"`:
 ```
 npm i -S @alessiocancian/react-native-actionsheet
 ```
+If you use `ActionSheetCustom` you also need a `pod install` to link `@react-native-community/blur` dependency.
+
+## Expo support
+
+**ActionSheet** supports Expo as is because iOS implementation uses `ActionSheetIOS` from `react-native` while Android version is a pure-javascript implementation.\
+Instead, **ActionSheetCustom** needs a blur library to reproduce the native effect on iOS, so it currently uses `@react-native-community/blur` which requires native modules. However if you need to use it with expo you can replace (using patch-package) `'@react-native-community/blur'` with `‘expo-blur‘` inside `lib/BlurView.ios.js`, run `expo install expo-blur` and it will work.
+
 
 ## Usage
 
@@ -116,6 +132,7 @@ class Demo extends React.Component {
   }
 }
 ```
+
 
 ### How to redesign style ?
 
